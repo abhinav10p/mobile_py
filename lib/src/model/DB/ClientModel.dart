@@ -30,13 +30,13 @@ class Client {
   });
 
   Client.fromJson(Map json)
-      : id = json['id'],
-        firstName = json['firstName'],
-        lastName = json['lastName'],
-        phone = json['phone'],
-        country = json['country'],
-        avatar = json['avatar'],
-        description = json['description'];
+      : id = json['Id'],
+        firstName = json['FirstName'],
+        lastName = json['LastName'],
+        phone = json['Phone'],
+        country = json['Country']['Img'],
+        avatar = json['Avatar'],
+        description = json['Description'];
 
   factory Client.fromMap(Map<String, dynamic> json) => new Client(
         id: json["id"],
