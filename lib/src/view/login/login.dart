@@ -3,11 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:mobile_py/src/controller.dart' show Page2;
 import 'package:mobile_py/localization/localizations.dart';
 
-TextStyle style = TextStyle(
-    fontFamily: 'Montserrat',
-    backgroundColor: Colors.white24,
-    fontSize: 20.0,
-    color: Colors.white);
+
 var page = new Page2();
 
 class FirstPage extends StatelessWidget {
@@ -16,7 +12,11 @@ class FirstPage extends StatelessWidget {
     Locale myLocale = Localizations.localeOf(context);
     final userField = TextField(
       obscureText: false,
-      style: style,
+      style:  TextStyle(
+          fontFamily: 'Montserrat',
+          backgroundColor: Colors.white24,
+          fontSize: 15.0,
+          color: Colors.white),
       decoration: InputDecoration(
           filled: true,
           fillColor: Colors.white,
@@ -30,7 +30,7 @@ class FirstPage extends StatelessWidget {
       style: TextStyle(
           fontFamily: 'Montserrat',
           backgroundColor: Colors.white24,
-          fontSize: 20.0,
+          fontSize: 15.0,
           color: Colors.white),
       decoration: InputDecoration(
           filled: true,
@@ -46,14 +46,14 @@ class FirstPage extends StatelessWidget {
       color: Color(0xff01A0C7),
       child: MaterialButton(
         minWidth: MediaQuery.of(context).size.width,
-        padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+        //padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         onPressed: () {
           page.loginNavigate(context);
         },
         child: Text("Login",
             textAlign: TextAlign.center,
-            style: style.copyWith(
-                color: Colors.white, fontWeight: FontWeight.bold)),
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)
+        ),
       ),
     );
     return MaterialApp(
